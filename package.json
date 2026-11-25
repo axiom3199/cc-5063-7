@@ -1,0 +1,34 @@
+{
+  "name": "inspection-surface-workbench",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Measurement-point parametric surface fitting workbench for wingtip specimens",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "gen:data": "tsx scripts/generate-data.ts",
+    "study": "tsx scripts/validation-study.ts",
+    "verify": "npm run typecheck && npm run study && npm run test"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/three": "^0.187.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.0",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  }
+}
