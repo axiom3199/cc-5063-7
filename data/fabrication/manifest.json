@@ -1,0 +1,273 @@
+{
+  "generatedAt": "2026-11-26T08:37:54.549Z",
+  "packages": [
+    {
+      "key": "analytic-coarse",
+      "id": "WT-07-analytic-coarse",
+      "title": "解析真值 · 采样表 A（尖棱处稀疏）",
+      "file": "data/fabrication/analytic-coarse.json",
+      "method": "analytic",
+      "table": "table-A-coarse",
+      "observations": 221,
+      "controlPoints": 72,
+      "fitRms": 0.0005412501764877533,
+      "fitRmsHoldout": 0.0006814527371176717,
+      "matingCoverage": 0.7490935460478607,
+      "maxGap": 0.002421504340764739,
+      "segments": [
+        {
+          "label": "前缘短棱",
+          "coverage": 0.7473867595818815
+        },
+        {
+          "label": "后缘长棱",
+          "coverage": 0.6498257839721254
+        }
+      ],
+      "edgeAdvice": "add-measurement",
+      "lostFeatures": 23,
+      "outliers": {
+        "injected": 4,
+        "downweighted": 3
+      },
+      "conventionsOk": true,
+      "checks": [
+        {
+          "id": "fit-rms",
+          "ok": true
+        },
+        {
+          "id": "coverage",
+          "ok": true
+        },
+        {
+          "id": "mating-max",
+          "ok": true
+        },
+        {
+          "id": "max-gap",
+          "ok": true
+        },
+        {
+          "id": "ridge-band",
+          "ok": true
+        },
+        {
+          "id": "lost-feature",
+          "ok": true
+        },
+        {
+          "id": "edge-advice",
+          "ok": true
+        },
+        {
+          "id": "method",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "key": "analytic-refined",
+      "id": "WT-07-analytic-refined",
+      "title": "解析真值 · 采样表 B（尖棱处加密）",
+      "file": "data/fabrication/analytic-refined.json",
+      "method": "analytic",
+      "table": "table-B-refined",
+      "observations": 391,
+      "controlPoints": 72,
+      "fitRms": 0.0004924519718016319,
+      "fitRmsHoldout": 0.0005397346188658194,
+      "matingCoverage": 0.9927483683828862,
+      "maxGap": 0.0010633492976954624,
+      "segments": [
+        {
+          "label": "前缘短棱",
+          "coverage": 1
+        },
+        {
+          "label": "后缘长棱",
+          "coverage": 0.9825783972125436
+        }
+      ],
+      "edgeAdvice": "none",
+      "lostFeatures": 0,
+      "outliers": {
+        "injected": 4,
+        "downweighted": 4
+      },
+      "conventionsOk": true,
+      "checks": [
+        {
+          "id": "fit-rms",
+          "ok": true
+        },
+        {
+          "id": "coverage",
+          "ok": true
+        },
+        {
+          "id": "mating-min",
+          "ok": true
+        },
+        {
+          "id": "edge-coverage",
+          "ok": true
+        },
+        {
+          "id": "ridge-band",
+          "ok": true
+        },
+        {
+          "id": "band-max",
+          "ok": true
+        },
+        {
+          "id": "lost-feature",
+          "ok": true
+        },
+        {
+          "id": "edge-advice",
+          "ok": true
+        },
+        {
+          "id": "method",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "key": "section-refined",
+      "id": "WT-07-section-refined",
+      "title": "标定截面拼装真值 · 采样表 B（峰顶已测仍失棱）",
+      "file": "data/fabrication/section-refined.json",
+      "method": "section",
+      "table": "table-B-refined",
+      "observations": 391,
+      "controlPoints": 72,
+      "fitRms": 0.00047351857076545376,
+      "fitRmsHoldout": 0.0005149053717690983,
+      "matingCoverage": 0.6490210297316896,
+      "maxGap": 0.0029756404967346954,
+      "segments": [
+        {
+          "label": "前缘短棱",
+          "coverage": 0.7038327526132404
+        },
+        {
+          "label": "后缘长棱",
+          "coverage": 0.4616724738675958
+        }
+      ],
+      "edgeAdvice": "method-review",
+      "lostFeatures": 20,
+      "outliers": {
+        "injected": 4,
+        "downweighted": 4
+      },
+      "conventionsOk": true,
+      "checks": [
+        {
+          "id": "fit-rms",
+          "ok": true
+        },
+        {
+          "id": "coverage",
+          "ok": true
+        },
+        {
+          "id": "mating-max",
+          "ok": true
+        },
+        {
+          "id": "max-gap",
+          "ok": true
+        },
+        {
+          "id": "ridge-band",
+          "ok": true
+        },
+        {
+          "id": "band-max",
+          "ok": true
+        },
+        {
+          "id": "lost-feature",
+          "ok": true
+        },
+        {
+          "id": "edge-advice",
+          "ok": true
+        },
+        {
+          "id": "method",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "key": "section-coarse",
+      "id": "WT-07-section-coarse",
+      "title": "标定截面拼装真值 · 采样表 A（双重不足）",
+      "file": "data/fabrication/section-coarse.json",
+      "method": "section",
+      "table": "table-A-coarse",
+      "observations": 221,
+      "controlPoints": 72,
+      "fitRms": 0.0005412501764877533,
+      "fitRmsHoldout": 0.0006814527371176717,
+      "matingCoverage": 0.7490935460478607,
+      "maxGap": 0.002421504340764739,
+      "segments": [
+        {
+          "label": "前缘短棱",
+          "coverage": 0.7473867595818815
+        },
+        {
+          "label": "后缘长棱",
+          "coverage": 0.6498257839721254
+        }
+      ],
+      "edgeAdvice": "add-measurement",
+      "lostFeatures": 23,
+      "outliers": {
+        "injected": 4,
+        "downweighted": 3
+      },
+      "conventionsOk": true,
+      "checks": [
+        {
+          "id": "fit-rms",
+          "ok": true
+        },
+        {
+          "id": "coverage",
+          "ok": true
+        },
+        {
+          "id": "mating-max",
+          "ok": true
+        },
+        {
+          "id": "max-gap",
+          "ok": true
+        },
+        {
+          "id": "ridge-band",
+          "ok": true
+        },
+        {
+          "id": "lost-feature",
+          "ok": true
+        },
+        {
+          "id": "edge-advice",
+          "ok": true
+        },
+        {
+          "id": "method",
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

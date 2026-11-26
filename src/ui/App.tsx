@@ -7,6 +7,9 @@ import type { WorkbenchSession } from '../scenarios/session.js';
 import { SurfaceView } from './three/SurfaceView.js';
 import { buildViewerMesh, exportSurface, initialEditable, inspectLocal, refit } from './workbench.js';
 import type { EditableSettings } from './workbench.js';
+import { ModeTabs } from './ModeTabs.js';
+import type { WorkbenchMode } from './ModeTabs.js';
+import { FabricationWorkbench } from './FabricationWorkbench.js';
 
 const STATES: Record<string, string> = {
   'blocked-labels': '阻断：标签缺陷',
@@ -49,6 +52,26 @@ function Slider(props: {
 }
 
 export function App() {
+  const [mode, setMode] = useState<WorkbenchMode>('scenario');
+  return (
+    <div className="app">
+      <header>
+        <div>
+          <h1>{mode === 'scenario' ? '测点曲面拟合工作台' : '设计观测制作 · 曲面测点资料包'}</h1>
+          <p className="subtitle">
+            {mode === 'scenario'
+              ? '翼尖样件 · 参数标签由输入提供并校验 · 漂移/折线假设由样板试配与对侧复测裁决'
+              : '自制带参数标签与可靠度的测点 · 保存真值与观测生成脚本 · 分离拟合者与装配者角色'}
+          </p>
+        </div>
+        <ModeTabs mode={mode} onChange={setMode} />
+      </header>
+      {mode === 'scenario' ? <ScenarioWorkbench /> : <FabricationWorkbench />}
+    </div>
+  );
+}
+
+function ScenarioWorkbench() {
   const specs = scenarioList();
   const [scenarioId, setScenarioId] = useState(specs[0].id);
   const [editable, setEditable] = useState<EditableSettings | null>(null);
@@ -75,12 +98,8 @@ export function App() {
   const pending = result.readiness.pendingRegion;
 
   return (
-    <div className="app">
-      <header>
-        <div>
-          <h1>测点曲面拟合工作台</h1>
-          <p className="subtitle">翼尖样件 · 参数标签由输入提供并校验 · 漂移/折线假设由样板试配与对侧复测裁决</p>
-        </div>
+    <>
+      <div className="subheader">
         <div className="scenario-picker">
           <label>
             场景
@@ -100,7 +119,7 @@ export function App() {
             </select>
           </label>
         </div>
-      </header>
+      </div>
 
       <div className="layout">
         <aside className="left">
@@ -278,6 +297,6 @@ export function App() {
           </section>
         </aside>
       </div>
-    </div>
+    </>
   );
 }

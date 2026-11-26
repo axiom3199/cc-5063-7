@@ -67,6 +67,152 @@ h1 {
   max-width: 320px;
 }
 
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.tab {
+  flex: none;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: var(--text);
+}
+
+.tab.active {
+  background: var(--accent);
+  color: #06121f;
+  font-weight: 600;
+}
+
+.subheader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.package-select {
+  width: 100%;
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 7px 8px;
+  font-size: 12px;
+}
+
+.gate-pass {
+  background: rgba(63, 185, 80, 0.15);
+  color: var(--ok);
+}
+
+.gate-fail {
+  background: rgba(248, 81, 73, 0.13);
+  color: var(--bad);
+}
+
+.advice {
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.advice strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.advice p {
+  margin: 0;
+  color: #c4ced9;
+}
+
+.advice-none {
+  background: rgba(63, 185, 80, 0.12);
+  border: 1px solid rgba(63, 185, 80, 0.35);
+}
+.advice-none strong {
+  color: var(--ok);
+}
+
+.advice-add-measurement {
+  background: rgba(210, 153, 34, 0.12);
+  border: 1px solid rgba(210, 153, 34, 0.35);
+}
+.advice-add-measurement strong {
+  color: var(--warn);
+}
+
+.advice-method-review {
+  background: rgba(248, 81, 73, 0.12);
+  border: 1px solid rgba(248, 81, 73, 0.35);
+}
+.advice-method-review strong {
+  color: var(--bad);
+}
+
+.lost {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 11.5px;
+}
+
+.lost small {
+  display: block;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 24px;
+  text-align: center;
+}
+
+.empty-state code {
+  font-family: var(--mono);
+  background: var(--panel-2);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.refit-error {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 38px;
+  background: rgba(248, 81, 73, 0.92);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11.5px;
+}
+
 .layout {
   flex: 1;
   display: grid;

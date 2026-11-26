@@ -12,8 +12,11 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "gen:data": "tsx scripts/generate-data.ts",
+    "gen:fabrication": "tsx scripts/generate-fabrication.ts",
+    "reconstruct:fabrication": "tsx scripts/reconstruct-fabrication.ts",
     "study": "tsx scripts/validation-study.ts",
-    "verify": "npm run typecheck && npm run study && npm run test"
+    "verify:fabrication": "tsx scripts/reconstruct-fabrication.ts analytic-coarse && tsx scripts/reconstruct-fabrication.ts analytic-refined && tsx scripts/reconstruct-fabrication.ts section-refined && tsx scripts/reconstruct-fabrication.ts section-coarse",
+    "verify": "npm run typecheck && npm run study && npm run verify:fabrication && npm run test"
   },
   "dependencies": {
     "react": "^19.3.1",
